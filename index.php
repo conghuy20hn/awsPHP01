@@ -10,12 +10,11 @@ function ServiceHandler()
     return json_encode($data);
 }
 
-;
 
 $app = new \Slim\App;
 
-$app->get('/', 'ServiceHandler');
-$app->post('/', 'ServiceHandler');
+$app->get('/a', 'ServiceHandler');
+$app->post('/a', 'ServiceHandler');
 
 
 $app->get('/books', function ($request, $response, $args) {
